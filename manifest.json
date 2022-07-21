@@ -4,14 +4,7 @@
     "version": "1.0",
     "manifest_version": 3,
 
-    "action": {
-        "default_title": "Click Me"
-    },
-
-    "permissions": [
-        "activeTab"
-      ],
-      "background": {
-        "service_worker": "background.js"
-      }
+    "chrome_url_overrides" : {
+        "newtab": "newtab.htm"
+    }
   }

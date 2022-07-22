@@ -1,5 +1,6 @@
 const newStyles = document.createElement("style")
-newStyles.innerHTML = `:root {
+newStyles.innerHTML = `
+:root {
     --angle: calc(-255deg);
 }
 
@@ -31,11 +32,12 @@ body {
     width: 40px;
     height: 2.5px;
     opacity: .8;
-    background-color: white;
+    background-color: lightblue;
     visibility: hidden;
 
     animation: fall 1s linear 0s 1000000000;
-}`
+}
+`
 
 document.body.appendChild(newStyles)
 

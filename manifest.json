@@ -4,7 +4,10 @@
     "version": "1.0",
     "manifest_version": 3,
 
-    "chrome_url_overrides" : {
-        "newtab": "./newtab.htm"
-    }
+    "content_scripts": [
+        {
+          "matches": ["chrome://new-tab-page/"],
+          "js": ["inject.js"]
+        }
+      ]
   }

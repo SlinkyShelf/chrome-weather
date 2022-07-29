@@ -41,17 +41,27 @@ body {
 
 document.body.appendChild(newStyles)
 
-const rainDropCount = 200
+const padCount = 10
+const dropsPerPad = 20
 const rainDrops = []
 
 const fallangle = 225
 
+const rainDropContainer = document.createElement("svg")
+
+rainDropContainer.setAttribute("width", "100vw")
+rainDropContainer.setAttribute("width", "100vh")
+
+document.body.appendChild(rainDropContainer)
+
 for (var i = 0; i < rainDropCount; i++)
 {
-    const drop = document.createElement("div")
+    const drop = document.createElement("rect")
     drop.classList.add("drop")
-    document.body.appendChild(drop)
+    // document.body.appendChild(drop)
     drop.style.left = Math.random()*200+"%"
     drop.style.top = "-20px"
     drop.style.animationDelay = Math.random()*5 + "s"
+
+    rainDropContainer.appendChild(drop)
 }
